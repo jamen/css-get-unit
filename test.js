@@ -8,6 +8,7 @@ test('strip single values', function one(t) {
   t.is(strip('75.10kHz'), '75.10', 'strip("75.10kHz") === "75.10"');
   t.is(strip('.5s'), '.5', 'strip(".5s") === ".5"');
   t.is(strip('100rem'), '100', 'strip("100rem") === "100"');
+  t.is(strip('auto'), 'auto', 'strip("auto") === "auto"');
   t.end();
 });
 

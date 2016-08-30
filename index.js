@@ -21,4 +21,5 @@ function strip(v) {
     return o;
   }
   while (i--) if (n.indexOf(v[i]) !== -1) return v.slice(0, i + 1);
+  return v;
 };
