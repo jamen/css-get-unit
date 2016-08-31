@@ -15,6 +15,17 @@ strip(['100%', '99rem', '.25s']);
 
 Note: This module stays future-proof by stripping any letters off the end.  So non-existent units are still stripped.  Use another module to check the validity of unit.
 
+Getting the unit with the stripped number:
+```javascript
+var value = '100px';
+var number = strip(value);
+// => '100'
+
+// Slice the value to get the unit.
+var unit = value.slice(number.length);
+// => 'px'
+```
+
 ## Installation
 
 ```sh

@@ -10,16 +10,26 @@ module.exports = strip;
   * ```
   */
 
-var n = '1234567890';
+var NUMBERS = '1234567890';
 
-function strip(v) {
-  if (!v || !v.length) return null;
-  var i = v.length;
-  if (v instanceof Array) {
-    var o = [];
-    while (i--) o[i] = strip(v[i]);
-    return o;
+function strip(value) {
+  // Exit fast if not valid value.
+  if (!value || !value.length) return null;
+
+  var i = value.length;
+
+  // Loop and strip each item if value is array.
+  if (value instanceof Array) {
+    var output = [];
+    while (i--) output[i] = strip(value[i]);
+    return output;
   }
-  while (i--) if (n.indexOf(v[i]) !== -1) return v.slice(0, i + 1);
-  return v;
+
+  // Strip the unit from the value.
+  while (i--)
+    if (NUMBERS.indexOf(value[i]) !== -1)
+      return value.slice(0, i + 1);
+
+  // Pass if unable to strip (i.e. 'auto')
+  return value;
 };
