@@ -1,4 +1,4 @@
-# css-strip-unit [![NPM version](https://badge.fury.io/js/css-strip-unit.svg)](https://npmjs.org/package/css-strip-unit) [![Build Status](https://travis-ci.org/jamen/css-strip-unit.svg?branch=master)](https://travis-ci.org/jamen/css-strip-unit)
+# css-strip-units [![NPM version](https://badge.fury.io/js/css-strip-units.svg)](https://npmjs.org/package/css-strip-units) [![Build Status](https://travis-ci.org/jamen/css-strip-units.svg?branch=master)](https://travis-ci.org/jamen/css-strip-units)
 
 > Strip the unit off a CSS number.
 
@@ -30,7 +30,7 @@ var unit = value.slice(number.length);
 ## Installation
 
 ```sh
-$ npm install --save css-strip-unit
+$ npm install --save css-strip-units
 ```
 
 ## API

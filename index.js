@@ -1,6 +1,6 @@
 module.exports = strip;
 
-/** @module css-strip-unit
+/** @module css-strip-units
   *
   * Strip the unit off a CSS number.
   *
