@@ -1,7 +1,7 @@
 {
   "name": "css-strip-units",
   "description": "Strip the unit off a CSS number.",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "homepage": "https://github.com/jamen/css-strip-units",
   "author": "Jamen Marz (https://github.com/jamen)",
   "repository": "jamen/css-strip-units",
