@@ -13,9 +13,10 @@ strip(['100%', '99rem', '.25s']);
 // => ['100', '99', '.25']
 ```
 
-Note: This module stays future-proof by stripping any letters off the end.  So non-existent units are still stripped.  Use another module to check the validity of unit.
+This module stays future-proof by stripping any letters off the end.  So non-existent units are still stripped.  Use another module to check the validity of unit.
 
 Getting the unit with the stripped number:
+
 ```javascript
 var value = '100px';
 var number = strip(value);
@@ -35,11 +36,20 @@ $ npm install --save css-strip-unit
 ## API
 
 ### `strip(value)`
+
 Strip any number's unit (including those non-existent).
 
  - `value` (`String`|`Array`): String or array of values to strip the unit(s) from.
 
-Returns string or array depending on what you input, with the unit or units stripped from them.
+```javascript
+strip('2px');
+// => '2'
+
+strip(['.01px', '9px']);
+// => ['.01', '9']
+```
+
+Returns string or array depending the type of `value` you input.
 
 ## License
 

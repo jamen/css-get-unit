@@ -10,7 +10,7 @@ module.exports = strip;
   * ```
   */
 
-var NUMBERS = '1234567890';
+var NUMBER = '1234567890';
 
 function strip(value) {
   // Exit fast if not valid value.
@@ -27,7 +27,7 @@ function strip(value) {
 
   // Strip the unit from the value.
   while (i--)
-    if (NUMBERS.indexOf(value[i]) !== -1)
+    if (NUMBER.indexOf(value[i]) !== -1)
       return value.slice(0, i + 1);
 
   // Pass if unable to strip (i.e. 'auto')
