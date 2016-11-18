@@ -1,30 +1,32 @@
 # css-strip-units [![NPM version](https://badge.fury.io/js/css-strip-units.svg)](https://npmjs.org/package/css-strip-units) [![Build Status](https://travis-ci.org/jamen/css-strip-units.svg?branch=master)](https://travis-ci.org/jamen/css-strip-units)
 
-> Strip the unit off a CSS number.
+> Strip everything but the unit from a CSS value.
 
 ```js
-strip('1px');
-// => '1'
+strip('1px')
+// => 'px'
 
-strip('30.5kHz');
-// => '30.5'
+strip('30.5kHz')
+// => 'kHz'
 
-strip(['100%', '99rem', '.25s']);
-// => ['100', '99', '.25']
+strip(['100%', '99rem', '.25s'])
+// => ['%', 'rem', 's']
 ```
 
-This module stays future-proof by stripping any letters off the end.  So non-existent units are still stripped.  Use another module to check the validity of unit.
+This module stays future-proof by stripping numbers off the front, so non-existent units are still passed with this module.  Use another module to check the validity of units.
 
-Getting the unit with the stripped number:
+To get the number of a CSS value simply use `parseFloat` or `parseInt` (it actually works!):
 
 ```javascript
-var value = '100px';
-var number = strip(value);
-// => '100'
+var value = '100px'
 
-// Slice the value to get the unit.
-var unit = value.slice(number.length);
+// User css-strip-units to get unit:
+var unit = strip(value)
 // => 'px'
+
+// Use parseFloat to get number:
+var number = parseFloat(value)
+// => 100
 ```
 
 ## Installation
@@ -42,10 +44,10 @@ Strip any number's unit (including those non-existent).
  - `value` (`String`|`Array`): String or array of values to strip the unit(s) from.
 
 ```javascript
-strip('2px');
+strip('2px')
 // => '2'
 
-strip(['.01px', '9px']);
+strip(['.01px', '9px'])
 // => ['.01', '9']
 ```
 

@@ -26,9 +26,10 @@ function strip(value) {
   }
 
   // Strip the unit from the value.
+  var len = i
   while (i--)
     if (NUMBER.indexOf(value[i]) !== -1)
-      return value.slice(0, i + 1);
+      return value.slice(i + 1, len);
 
   // Pass if unable to strip (i.e. 'auto')
   return value;
