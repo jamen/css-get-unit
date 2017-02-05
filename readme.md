@@ -43,7 +43,7 @@ $ npm install --save css-get-unit
 
 ```javascript
 unit('2px')
-// => '2'
+// => 'px'
 
 unit('.5ms')
 // => 'ms'
