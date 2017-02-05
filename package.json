@@ -1,12 +1,12 @@
 {
-  "name": "css-strip-units",
+  "name": "css-get-unit",
   "description": "Strip everything but the unit from a CSS value.",
   "version": "1.0.0",
-  "homepage": "https://github.com/jamen/css-strip-units",
+  "homepage": "https://github.com/jamen/css-get-unit",
   "author": "Jamen Marz (https://github.com/jamen)",
-  "repository": "jamen/css-strip-units",
+  "repository": "jamen/css-get-unit",
   "bugs": {
-    "url": "https://github.com/jamen/css-strip-units/issues"
+    "url": "https://github.com/jamen/css-get-unit/issues"
   },
   "main": "index.js",
   "files": [
@@ -17,7 +17,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "tape test.js"
+    "test": "node test"
   },
   "keywords": [
     "css",
