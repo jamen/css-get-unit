@@ -1,6 +1,6 @@
 # css-get-unit [![NPM version](https://badge.fury.io/js/css-get-unit.svg)](https://npmjs.org/package/css-get-unit) [![Build Status](https://travis-ci.org/jamen/css-get-unit.svg?branch=master)](https://travis-ci.org/jamen/css-get-unit)
 
-> unit everything but the unit from a CSS value.
+> Get unit from a CSS value
 
 ```js
 var unit = require('css-get-unit')
@@ -10,11 +10,12 @@ unit('1px')
 
 unit('30.5kHz')
 // => 'kHz'
+
+unit('auto')
+// => null
 ```
 
-This module stays future-proof by unitping numbers off the front, so non-existent units are still passed with this module.  Use another module to check the validity of units.
-
-To get the number of a CSS value simply use `parseFloat` or `parseInt` (it actually works!):
+This module gets unit from the CSS value without verifying.  If there is no unit it will return `null`.  To get the number instead, just use `parseFloat`:
 
 ```javascript
 var value = '100px'
@@ -38,9 +39,7 @@ $ npm install --save css-get-unit
 
 ### `unit(value)`
 
-unit any number's unit (including those non-existent).
-
- - `value` (`String`|`Array`): String or array of values to unit the unit(s) from.
+ - `value` (`String`): CSS value to get the unit from
 
 ```javascript
 unit('2px')
@@ -50,10 +49,8 @@ unit('.5ms')
 // => 'ms'
 
 unit('100')
-//
+// => null
 ```
-
-Returns string or array depending the type of `value` you input.
 
 ## License
 
