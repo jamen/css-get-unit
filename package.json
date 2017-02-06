@@ -1,7 +1,7 @@
 {
   "name": "css-get-unit",
   "description": "Get the unit of a CSS value",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/jamen/css-get-unit",
   "author": "Jamen Marz (https://github.com/jamen)",
   "repository": "jamen/css-get-unit",
