@@ -1,14 +1,12 @@
-module.exports = unit
+module.exports = function unit (value) {
 
-var NUMBER = '1234567890'
-
-function unit (value) {
-  if (!value || !value.length) return null
-
-  var i = value.length
-  var len = i
+  var len = value.length
+  if (!value || !len)
+    return null
+		
+  var i = len
   while (i--)
-    if (NUMBER.indexOf(value[i]) !== -1)
+    if (!isNaN(value[i]))
       return value.slice(i + 1, len) || null
 
   return null
